@@ -245,6 +245,12 @@ const prettyUrl = (u: string) => u.replace(/^https?:\/\//, '').replace(/\/$/, ''
   transform: translate(-50%, 14px);
 }
 
+/* below this width the centered card would collide with the save controls */
+@media (max-width: 1240px) {
+  .card {
+    bottom: calc(86px + var(--safe-b));
+  }
+}
 @media (max-width: 640px) {
   .card {
     bottom: calc(84px + var(--safe-b));
